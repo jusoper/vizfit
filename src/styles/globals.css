@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Color Palette - CSS Variables */
+:root {
+  --color-neutral-white: #FFFFFF;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #4F5B6C;
+  --color-text-tertiary: #8B95A8;
+  --color-bg-light: #F5F7FA;
+  --color-primary-blue: #0052CC;
+  --color-primary-blue-light: #E3F2FD;
+  --color-primary-blue-dark: #003D99;
+  --color-accent-orange: #FF8C42;
+  --color-accent-orange-light: #FFF3E0;
+  --color-accent-orange-dark: #E67E22;
+  --color-dark-blue: #1F3A70;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilos personalizados */
+.btn-primary {
+  @apply bg-accent-orange text-neutral-white font-bold py-3 px-6 rounded-lg hover:bg-accent-orange-dark transition duration-300 shadow-md;
+}
+
+.btn-secondary {
+  @apply bg-primary-blue text-neutral-white font-bold py-3 px-6 rounded-lg hover:bg-primary-blue-dark transition duration-300 shadow-md;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
