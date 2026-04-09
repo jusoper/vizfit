@@ -1,6 +1,7 @@
 export interface WorkoutRequest {
   id?: string;
   name: string;
+  email: string;
   apartment: string;
   weight: number;
   height: number;
@@ -11,7 +12,7 @@ export interface WorkoutRequest {
   duration: number;
   restrictions: string;
   equipment_preference: 'aparelhos' | 'peso_livre' | 'ambos';
-  contact_method: 'email' | 'whatsapp';
+  contact_method: 'whatsapp';
   contact_value: string;
   status: 'recebido' | 'em_revisao' | 'pronto' | 'enviado';
   created_at?: string;

@@ -9,8 +9,8 @@ import { saveWorkoutRequest } from '@/lib/db'
 const STEPS = [
   {
     id: 1,
-    title: 'Nome e Apartamento',
-    fields: ['name', 'apartment'],
+    title: 'Nome, Email e Apartamento',
+    fields: ['name', 'email', 'apartment'],
   },
   {
     id: 2,
@@ -44,6 +44,7 @@ export default function WorkoutForm() {
   const [currentStep, setCurrentStep] = useState(1)
   const [formData, setFormData] = useState({
     name: '',
+    email: '',
     apartment: '',
     weight: '',
     height: '',
@@ -123,6 +124,7 @@ export default function WorkoutForm() {
     try {
       const result = await saveWorkoutRequest({
         name: formData.name,
+        email: formData.email,
         apartment: formData.apartment,
         weight: typeof formData.weight === 'number' ? formData.weight : parseInt(formData.weight as string, 10),
         height: typeof formData.height === 'number' ? formData.height : parseInt(formData.height as string, 10),
@@ -200,6 +202,18 @@ export default function WorkoutForm() {
                     onChange={handleChange}
                     required
                     placeholder="Seu nome"
+                    className="w-full px-4 py-3 bg-navy-dark/40 border border-blue-secondary/50 rounded-lg text-off-white placeholder-off-white/40 focus:outline-none focus:ring-2 focus:ring-orange-primary"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold mb-2 text-off-white">Email*</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="seu.email@gmail.com"
                     className="w-full px-4 py-3 bg-navy-dark/40 border border-blue-secondary/50 rounded-lg text-off-white placeholder-off-white/40 focus:outline-none focus:ring-2 focus:ring-orange-primary"
                   />
                 </div>
@@ -383,29 +397,14 @@ export default function WorkoutForm() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold mb-4 text-off-white">Como você quer receber seu treino?*</label>
-                  <div className="space-y-3 mb-4">
-                    {['whatsapp', 'email'].map((method) => (
-                      <label key={method} className="flex items-center gap-3 cursor-pointer group">
-                        <input
-                          type="radio"
-                          name="contact_method"
-                          value={method}
-                          checked={formData.contact_method === method}
-                          onChange={handleChange}
-                          className="w-4 h-4 accent-orange-primary"
-                        />
-                        <span className="capitalize text-off-white group-hover:text-orange-primary transition">{method === 'whatsapp' ? 'WhatsApp' : 'Email'}</span>
-                      </label>
-                    ))}
-                  </div>
+                  <label className="block text-sm font-semibold mb-4 text-off-white">Seu WhatsApp para receber o treino*</label>
                   <input
                     type="text"
                     name="contact_value"
                     value={formData.contact_value}
                     onChange={handleChange}
                     required
-                    placeholder={formData.contact_method === 'whatsapp' ? '(11) 99999-9999' : 'seu.email@gmail.com'}
+                    placeholder="(11) 99999-9999"
                     className="w-full px-4 py-3 bg-navy-dark/40 border border-blue-secondary/50 rounded-lg text-off-white placeholder-off-white/40 focus:outline-none focus:ring-2 focus:ring-orange-primary"
                   />
                 </div>

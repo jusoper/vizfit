@@ -243,6 +243,10 @@ export default function LandingPage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-orange-primary flex-shrink-0">•</span>
+                <span>Especialista em treinamento funcional</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-orange-primary flex-shrink-0">•</span>
                 <span>Responsável por revisar e validar todos os treinos</span>
               </li>
             </ul>
@@ -300,7 +304,7 @@ export default function LandingPage() {
           <div className="bg-off-white/5 rounded-xl p-6 mb-8 border border-off-white/10">
             <p className="text-off-white text-lg">
               ✓ Treinos personalizados<br/>
-              ✓ Revisão do personal (CREF)<br/>
+              ✓ Revisão por profissional regularizado pelo CREF<br/>
               ✓ Entrega direto no WhatsApp
             </p>
           </div>

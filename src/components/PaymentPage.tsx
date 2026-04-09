@@ -16,7 +16,7 @@ export default function PaymentPage() {
   const [error, setError] = useState('')
   const [copied, setCopied] = useState(false)
 
-  const PIX_KEY = 'jusoper@gmail.com' // Substitua pela chave Pix real
+  const PIX_KEY = 'cd532c31-4b90-430a-b913-a707955395d0' // Substitua pela chave Pix real
   const PAYMENT_VALUE = 59.00
   const DEADLINE_MINUTES = 30
 
@@ -140,7 +140,7 @@ export default function PaymentPage() {
             {/* Instructions */}
             <div className="bg-blue-secondary/10 rounded-lg p-4 border border-blue-secondary/20">
               <p className="text-off-white/80 text-sm leading-relaxed">
-                💡 <span className="font-semibold">Como fazer:</span> Abra seu banco, selecione PIX, escolha &quot;Chave Aleatória&quot; ou &quot;e-mail&quot;, 
+                💡 <span className="font-semibold">Como fazer:</span> Abra seu banco, selecione PIX, escolha &quot;Chave Aleatória&quot;, 
                 cole a chave acima e confirme o pagamento. Pronto!
               </p>
             </div>
