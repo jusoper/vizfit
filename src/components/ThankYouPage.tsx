@@ -67,7 +67,7 @@ export default function ThankYouPage() {
     <div className="min-h-screen bg-navy-dark text-text-primary p-4 flex items-center">
       <div className="max-w-2xl mx-auto w-full">
         {/* Header */}
-        <Link href="/" className="flex justify-center mb-8 mt-4 hover:opacity-80 transition">
+        <Link href="/" className="flex justify-center mb-4 sm:mb-8 mt-2 sm:mt-4 hover:opacity-80 transition">
           <Image
             src="/images/logos/vizfit-logo.png"
             alt="VizFit Logo"

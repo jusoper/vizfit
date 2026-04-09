@@ -8,7 +8,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-navy-dark text-text-primary">
       {/* Header */}
       <header className="border-b border-orange-primary/20 bg-navy-dark sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-1 sm:py-2">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center hover:opacity-80 transition">
               <Image
@@ -31,7 +31,7 @@ export default function LandingPage() {
       </header>
 
       {/* SEÇÃO 1: HERO */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-24">
         {/* Conteúdo em 2 colunas 50/50 */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Coluna Esquerda - Texto */}
@@ -108,7 +108,7 @@ export default function LandingPage() {
       </section>
 
       {/* SEÇÃO 2: COMO FUNCIONA */}
-      <section id="como-funciona" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section id="como-funciona" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-20">
         <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16 text-off-white">
           Como funciona
         </h2>
@@ -165,7 +165,7 @@ export default function LandingPage() {
       </section>
 
       {/* SEÇÃO 3: RECURSOS */}
-      <section id="por-que" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section id="por-que" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-20">
         <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16 text-off-white">
           Recursos
         </h2>
@@ -210,7 +210,7 @@ export default function LandingPage() {
       </section>
 
       {/* SEÇÃO 4: QUEM SOMOS */}
-      <section id="quem-somos" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section id="quem-somos" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-20">
         <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4 text-off-white">
           Quem somos
         </h2>
@@ -287,7 +287,7 @@ export default function LandingPage() {
       </section>
 
       {/* SEÇÃO 5: OFERTA */}
-      <section id="oferta" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section id="oferta" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-20">
         <div className="bg-gradient-to-b from-orange-primary/20 to-blue-secondary/10 rounded-3xl p-12 text-center backdrop-blur-sm border-2 border-orange-primary max-w-2xl mx-auto">
           <p className="text-orange-primary font-bold text-lg mb-4 uppercase tracking-wide">
             Oferta de lançamento para moradores
@@ -297,7 +297,7 @@ export default function LandingPage() {
             Acesso inicial com preço reduzido
           </p>
 
-          <p className="text-7xl font-black text-orange-primary mb-6">
+          <p className="text-5xl sm:text-7xl font-black text-orange-primary mb-6">
             R$ 59,00
           </p>
 
@@ -323,7 +323,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-orange-primary/20 mt-20 bg-navy-dark">
+      <footer className="border-t border-orange-primary/20 mt-10 sm:mt-20 bg-navy-dark">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="text-center text-off-white/60">
             <p>© 2026 VizFit - Treinos Personalizados do Condomínio</p>
