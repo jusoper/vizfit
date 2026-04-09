@@ -154,7 +154,7 @@ export default function WorkoutForm() {
     <div className="min-h-screen bg-navy-dark text-text-primary p-4">
       <div className="max-w-xl mx-auto">
         {/* Logo */}
-        <Link href="/" className="flex justify-center mb-4 sm:mb-8 mt-2 sm:mt-4 hover:opacity-80 transition">
+        <Link href="/" className="flex justify-center mb-2 sm:mb-4 mt-1 sm:mt-2 hover:opacity-80 transition">
           <Image
             src="/images/logos/vizfit-logo.png"
             alt="VizFit Logo"

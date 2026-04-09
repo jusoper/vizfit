@@ -5,6 +5,7 @@
 CREATE TABLE IF NOT EXISTS workout_requests (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   name TEXT NOT NULL,
+  email TEXT NOT NULL,
   apartment TEXT NOT NULL,
   weight DECIMAL(5, 2) NOT NULL,
   height DECIMAL(5, 2) NOT NULL,
@@ -15,7 +16,7 @@ CREATE TABLE IF NOT EXISTS workout_requests (
   duration INTEGER NOT NULL,
   restrictions TEXT,
   equipment_preference TEXT NOT NULL CHECK (equipment_preference IN ('aparelhos', 'peso_livre', 'ambos')),
-  contact_method TEXT NOT NULL CHECK (contact_method IN ('email', 'whatsapp')),
+  contact_method TEXT NOT NULL CHECK (contact_method IN ('whatsapp')),
   contact_value TEXT NOT NULL,
   status TEXT NOT NULL DEFAULT 'recebido' CHECK (status IN ('recebido', 'em_revisao', 'pronto', 'enviado')),
   notes TEXT,
@@ -27,11 +28,8 @@ CREATE TABLE IF NOT EXISTS workout_requests (
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-
--- Adicionar novos campos se a tabela já existir (rodar estes commands separadamente se necessário)
-ALTER TABLE IF EXISTS workout_requests ADD COLUMN IF NOT EXISTS weight DECIMAL(5, 2);
-ALTER TABLE IF EXISTS workout_requests ADD COLUMN IF NOT EXISTS height DECIMAL(5, 2);
-ALTER TABLE IF EXISTS workout_requests ADD COLUMN IF NOT EXISTS general_objectives TEXT;
+-- Adicionar coluna email se a tabela já existir (execute este comando se a tabela já existe)
+ALTER TABLE IF EXISTS workout_requests ADD COLUMN IF NOT EXISTS email TEXT;
 
 -- Criar índices para melhor performance
 CREATE INDEX IF NOT EXISTS idx_status ON workout_requests(status);
