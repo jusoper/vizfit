@@ -202,7 +202,7 @@ export default function ProofUploadPage() {
             <h3 className="text-off-white font-bold mb-3">O que deve estar na captura:</h3>
             <ul className="text-blue-secondary text-sm space-y-2">
               <li>✓ Comprovante de PIX enviado ou recebido</li>
-              <li>✓ Valor: R$ 97,00</li>
+              <li>✓ Valor: R$ 59,00</li>
               <li>✓ Data e hora do pagamento</li>
               <li>✓ Chave PIX utilizada</li>
             </ul>

@@ -17,7 +17,7 @@ export default function PaymentPage() {
   const [copied, setCopied] = useState(false)
 
   const PIX_KEY = 'jusoper@gmail.com' // Substitua pela chave Pix real
-  const PAYMENT_VALUE = 97.00
+  const PAYMENT_VALUE = 59.00
   const DEADLINE_MINUTES = 30
 
   useEffect(() => {

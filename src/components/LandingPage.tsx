@@ -294,7 +294,7 @@ export default function LandingPage() {
           </p>
 
           <p className="text-7xl font-black text-orange-primary mb-6">
-            R$ 97,00
+            R$ 59,00
           </p>
 
           <div className="bg-off-white/5 rounded-xl p-6 mb-8 border border-off-white/10">
