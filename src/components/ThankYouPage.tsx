@@ -126,7 +126,7 @@ export default function ThankYouPage() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-off-white font-semibold mb-1">Recebendo seu PDF do treino por {request?.contact_method === 'email' ? 'email' : 'WhatsApp'}</h3>
+                  <h3 className="text-off-white font-semibold mb-1">Recebendo seu PDF do treino por WhatsApp</h3>
                   <p className="text-off-white/50 text-xs mt-2">Total: até 48 horas</p>
                 </div>
               </div>
@@ -136,8 +136,7 @@ export default function ThankYouPage() {
           {/* Contact Info */}
           <div className="bg-orange-primary/10 rounded-xl p-6 mb-8 border border-orange-primary/30">
             <h3 className="text-off-white font-bold mb-2">📱 Seus detalhes</h3>
-            <p className="text-blue-secondary text-sm mb-1">Contato: {request?.contact_value}</p>
-            <p className="text-blue-secondary text-sm">Método: {request?.contact_method === 'email' ? '📧 Email' : '💬 WhatsApp'}</p>
+            <p className="text-blue-secondary text-sm mb-1">WhatsApp: {request?.contact_value}</p>
           </div>
 
 

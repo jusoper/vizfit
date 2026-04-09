@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { getWorkoutRequests, updateWorkoutRequestStatus } from '@/lib/db'
 import { WorkoutRequest } from '@/types'
 
@@ -25,11 +25,7 @@ export default function AdminDashboard() {
   const [editingId, setEditingId] = useState<string | null>(null)
   const [editingNotes, setEditingNotes] = useState('')
 
-  useEffect(() => {
-    loadRequests()
-  }, [filtro])
-
-  const loadRequests = async () => {
+  const loadRequests = useCallback(async () => {
     setLoading(true)
     try {
       const data = await getWorkoutRequests({
@@ -41,7 +37,11 @@ export default function AdminDashboard() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [filtro])
+
+  useEffect(() => {
+    loadRequests()
+  }, [loadRequests])
 
   const handleStatusChange = async (id: string, newStatus: WorkoutRequest['status']) => {
     try {
