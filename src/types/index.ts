@@ -3,6 +3,7 @@ export interface WorkoutRequest {
   name: string;
   email: string;
   apartment: string;
+  age: number;
   weight: number;
   height: number;
   general_objectives: string;

@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS workout_requests (
   name TEXT NOT NULL,
   email TEXT NOT NULL,
   apartment TEXT NOT NULL,
+  age INTEGER NOT NULL,
   weight DECIMAL(5, 2) NOT NULL,
   height DECIMAL(5, 2) NOT NULL,
   general_objectives TEXT NOT NULL,

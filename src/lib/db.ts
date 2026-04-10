@@ -9,7 +9,7 @@ export async function saveWorkoutRequest(data: Omit<WorkoutRequest, 'id' | 'crea
         ...data,
         status: 'recebido',
         payment_status: 'pendente',
-        payment_value: 97.00, // Valor padrão do treino
+        payment_value: 59.00, // Valor padrão do treino
         created_at: new Date().toISOString(),
       },
     ])

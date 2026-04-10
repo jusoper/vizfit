@@ -15,7 +15,7 @@ const STEPS = [
   {
     id: 2,
     title: 'Dados Físicos e Objetivos',
-    fields: ['weight', 'height', 'general_objectives'],
+    fields: ['age', 'weight', 'height', 'general_objectives'],
   },
   {
     id: 3,
@@ -46,6 +46,7 @@ export default function WorkoutForm() {
     name: '',
     email: '',
     apartment: '',
+    age: '',
     weight: '',
     height: '',
     general_objectives: '',
@@ -89,7 +90,7 @@ export default function WorkoutForm() {
 
   const handleChange = (e: any) => {
     const { name, value } = e.target
-    const numericFields = ['frequency', 'duration', 'weight', 'height']
+    const numericFields = ['frequency', 'duration', 'age', 'weight', 'height']
     setFormData((prev) => ({
       ...prev,
       [name]: numericFields.includes(name) ? (value ? parseInt(value, 10) : '') : value,
@@ -126,6 +127,7 @@ export default function WorkoutForm() {
         name: formData.name,
         email: formData.email,
         apartment: formData.apartment,
+        age: typeof formData.age === 'number' ? formData.age : parseInt(formData.age as string, 10),
         weight: typeof formData.weight === 'number' ? formData.weight : parseInt(formData.weight as string, 10),
         height: typeof formData.height === 'number' ? formData.height : parseInt(formData.height as string, 10),
         general_objectives: formData.general_objectives,
@@ -235,6 +237,21 @@ export default function WorkoutForm() {
             {/* Step 2 */}
             {currentStep === 2 && (
               <>
+                <div>
+                  <label className="block text-sm font-semibold mb-2 text-off-white">Idade*</label>
+                  <input
+                    type="number"
+                    name="age"
+                    value={formData.age}
+                    onChange={handleChange}
+                    required
+                    placeholder="Ex: 28"
+                    step="1"
+                    min="1"
+                    max="120"
+                    className="w-full px-4 py-3 bg-navy-dark/40 border border-blue-secondary/50 rounded-lg text-off-white placeholder-off-white/40 focus:outline-none focus:ring-2 focus:ring-orange-primary"
+                  />
+                </div>
                 <div>
                   <label className="block text-sm font-semibold mb-2 text-off-white">Peso (kg)*</label>
                   <input
